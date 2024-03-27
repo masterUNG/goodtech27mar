@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class WidgetForm extends StatelessWidget {
@@ -11,6 +12,7 @@ class WidgetForm extends StatelessWidget {
     this.textInputType,
     this.textEditingController,
     this.marginTop,
+    this.width,
     this.fillColor,
   }) : super(key: key);
 
@@ -22,13 +24,14 @@ class WidgetForm extends StatelessWidget {
   final TextInputType? textInputType;
   final TextEditingController? textEditingController;
   final double? marginTop;
+  final double? width;
   final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin:  EdgeInsets.only(top: marginTop ?? 16),
-      width: 250,
+      width: width ?? 250,
       height: 40,
       child: TextFormField(
         controller: textEditingController,

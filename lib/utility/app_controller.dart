@@ -54,12 +54,22 @@ class AppController extends GetxController {
   RxInt indexBodyMobile = 0.obs;
   RxList<DateTime> jobDateTimes = <DateTime>[].obs;
   RxList<TimeOfDay> jobTimeOfDates = <TimeOfDay>[].obs;
-
   RxList<TypeTeachnicModel> typeTechnicModels = <TypeTeachnicModel>[].obs;
   RxList<PostJobModel> postJobModels = <PostJobModel>[].obs;
   RxInt amountNoti = 0.obs;
   RxInt indexPage = 0.obs;
   RxList<PostModel> postModels = <PostModel>[].obs;
+
+
+
+
+  RxList<String> docIdChatMessages = <String>[].obs;
+
+
+
+
+
+  
 
   Future<void> readChatModelForUser() async {
     if (chatModels.isNotEmpty) {
