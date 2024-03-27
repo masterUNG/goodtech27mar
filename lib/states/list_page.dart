@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:goodtech/models/post_model.dart';
 import 'package:goodtech/states/authen.dart';
@@ -229,9 +230,21 @@ class _ListPageState extends State<ListPage> {
                                           ),
                                   );
                                 }),
-                                WidgetIconButton(
-                                  iconData: Icons.favorite_rounded,
-                                  pressFunc: () {},
+                                Positioned(
+                                  right: 16,
+                                  bottom: Get.height * 0.3,
+                                  child: Column(mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      WidgetIconButton(
+                                        iconColor: Colors.pink,
+                                        iconData: Icons.favorite,
+                                        pressFunc: () {
+                                          print('You tap');
+                                        },
+                                      ),
+                                      WidgetText(text: '123', textStyle: AppConstant().h3Style(color: Colors.white, fontWeight: FontWeight.w700),)
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
